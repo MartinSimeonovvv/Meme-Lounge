@@ -1,0 +1,625 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#welcome {
+  background-color: white;
+  height: 80%;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  box-shadow: 0px 10px 13px -7px #000000, 0px -15px 0px -12px rgba(0,0,0,0);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.button:hover {
+  background-color: #044488;
+}
+
+#welcome-container {
+  width: 50%;
+  margin: auto;
+}
+#welcome-container h1 {
+  text-align: initial;
+}
+
+#welcome-container>img {
+  margin-top: 20px;
+  height: 80%;
+  width: 80%;
+}
+
+#button-div {
+  padding-top: 10px;
+  width: 37%;
+  margin: auto;
+}
+
+section h1 {
+  text-align: center;
+}
+
+#user-avatar-url {
+  display: block;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+#user-listings-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  border-bottom: 3px solid lightgrey;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 23px;
+  width: 60%;
+  text-decoration: none;
+  color: black;
+}
+
+.user-meme-listings {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.user-meme {
+  margin: 0 10px 0 10px;
+  width: 23%;
+  box-shadow: 2px 5px 13px 0px #000000, 8px -15px 31px -12px rgb(0 0 0 / 0%);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 2%;
+}
+
+.user-meme-title {
+  display: block;
+  width: 90%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding:7px;
+}
+
+.user-profile {
+  text-align: center;
+}
+
+.user-meme-title {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.user-meme-title:hover {
+  color: #4438ea;
+}
+
+
+.user-memes-buttons {
+  padding: 26px 0 24px 0;
+}
+
+.user-meme-btn {
+  margin-top: 15px;
+  background-color: blue;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+.userProfileImage {
+  width: 80%;
+  height: auto;
+}
+.user-meme .button {
+  margin-bottom: 10px;
+  bottom: 0;
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.user-content {
+  margin-top: 50px;
+  margin-left: 30px;
+  text-align: left;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  box-shadow: 2px 5px 13px 0px #000000, 8px -15px 31px -12px rgb(0 0 0 / 0%);
+  margin-bottom: 15px;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+.container.signin {
+  margin-top: 20px;
+}
+
+textarea {
+  height: 80px;
+}
+
+#notifications {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  margin: 1em;
+}
+
+.notification {
+  font-size: 1.5em;
+  color: #ffffff;
+  display: none;
+  text-align: right;
+}
+
+.notification>span {
+  display: inline-block;
+  padding:  0.5em 2em 0.5em 2em;
+  border-radius: 10px;
+}
+
+#loadingBox>span {
+  background: #7CB3E9;
+}
+#infoBox>span {
+  background: #393;
+}
+#errorBox>span {
+  background: #F50;
+}
+
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+nav a, nav span {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+nav a, #common {
+  float: left;
+}
+nav a.active {
+  background-color: #0069d9;
+  color: white;
+}
+
+.profile {
+  float: right;
+}
+
+/* nav div.user {
+  display: none;
+} */
+
+.meme-listings {
+  width: 86%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.my-meme {
+  width: 25%;
+}
+
+.my-meme>img {
+  margin: auto;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.meme-title {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.meme-title:hover {
+  color: #4438ea;
+}
+
+#container>div.my-memes>div>div>div {
+  padding-top: 20px;
+}
+
+.my-meme-btn {
+  margin-top: 15px;
+  background-color: blue;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+#meme-feed>h1 {
+  display: block;
+  border-bottom: 3px solid lightgrey;
+  margin: auto;
+  margin-bottom: 34px;
+  padding: 23px;
+  width: 60%;
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+#memes {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  text-align: center;
+  justify-content: space-around;
+
+}
+
+#memes .meme {
+  flex: 0 0 25%;
+  max-width: 50%;
+  position: relative;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 2%;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.card img {
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+}
+
+.meme-title {
+  padding: 10px;
+}
+
+h2.meme-title:hover {
+  color: #4438ea;
+  cursor: pointer;
+}
+
+.meme-image {
+  width: 250px;
+  height: auto;
+}
+
+.no-memes {
+  font-weight: bold;
+  font-size: 4em;
+}
+
+#data-buttons {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.custom-button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  margin: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.creator {
+  margin-left: 12em;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  padding: 11px 8px 11px 8px;
+}
+
+hr {
+  border: 2px solid lightgrey;
+  margin-bottom: 25px;
+}
+
+#meme-details {
+  margin: 0;
+}
+#meme-details h1 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.meme-details {
+  width: 100%;
+  padding-left: 15px;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top:50px;
+}
+
+.meme-details h1 {
+  display: block;
+}
+
+.meme-img {
+  max-width: 50%;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.meme-img img {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 60%;
+  height: auto;
+}
+
+.meme-description {
+  max-width: 35%;
+  flex: 0 0 35.333333%;
+  position: relative;
+  text-align: center;
+}
+
+.meme-description h2 {
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  margin-top: 1rem;
+  font-size: 1.75rem;
+}
+.meme-description  p {
+  margin-bottom: 50px;
+  text-align: justify;
+  box-shadow: 2px 5px 13px 0px #000000, 8px -15px 31px -12px rgb(0 0 0 / 0%);
+  padding:20px;
+}
+.warning {
+  margin-right: 20px;
+}
+
+.danger:hover {
+  color: #212529;
+  background-color: #dc3545;
+  border-color: #dc3545;
+} 
+.warning:hover {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+/* Add padding to containers */
+
+.container {
+  background-color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Full-width input fields */
+
+input[type=text], input[type=email], input[type=number], input[type=password] ,textarea{
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus ,textarea:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/register button */
+
+.registerbtn {
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+#details {
+  margin-bottom: 30px;
+}
+
+#edit-meme>form>div>p:nth-child(2) {
+  border-bottom: 3px solid lightgrey;
+  margin: auto;
+  margin-bottom: 34px;
+  padding: 23px;
+  width: 60%;
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+#create-meme>form>div>h1 {
+  border-bottom: 3px solid lightgrey;
+  margin: auto;
+  margin-bottom: 34px;
+  padding: 23px;
+  width: 60%;
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.gender label:first-of-type {
+  margin-right: 60px;
+}
+
+.container > label{
+  display: block;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
