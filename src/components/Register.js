@@ -38,6 +38,10 @@ function Register({
                 throw new Error('Passwords don\'t match!');
             }
 
+            if(gender ===    ''){
+                throw new Error('Please choose gender!')
+            }
+
             const userData = await response.json();
             setUser({
                 authToken: userData.accessToken,
@@ -49,7 +53,7 @@ function Register({
 
             history.push('/all-memes');
         } catch (error) {
-            alert(error.message);
+            return alert(error.message);
         }
     }
 
@@ -106,7 +110,6 @@ function Register({
                             name="gender"
                             id="female"
                             value="female"
-                            //value={input.gender}
                             onChange={handleChange}
                         />
                         <label htmlFor="female">Female</label>
@@ -115,8 +118,6 @@ function Register({
                             name="gender"
                             id="male"
                             value="male"
-                            checked
-                            //value={input.gender}
                             onChange={handleChange}
                         />
                         <label htmlFor="male">Male</label>

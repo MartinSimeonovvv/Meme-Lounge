@@ -21,12 +21,20 @@ function Edit({
         e.preventDefault();
         const { title, description, imageUrl } = e.target;
 
-        await fetch(`http://localhost:3030/data/memes/${match.params.id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json', 'X-Authorization': user.authToken },
-            body: JSON.stringify({ title: title.value, description: description.value, imageUrl: imageUrl.value})
-        });
-
+        try {
+            if(!title.value || !description.value || !imageUrl.value){
+                throw new Error('All fields are required!');
+            }
+    
+            await fetch(`http://localhost:3030/data/memes/${match.params.id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json', 'X-Authorization': user.authToken },
+                body: JSON.stringify({ title: title.value, description: description.value, imageUrl: imageUrl.value})
+            });
+        } catch (error) {
+            return alert(error.message);
+        }
+       
         return history.push(`/details/${match.params.id}`);
     }
 

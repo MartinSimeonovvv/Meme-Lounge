@@ -19,11 +19,13 @@ function Details({
     }, [match.params.id]);
 
     const deleteSingleMemeArticle = async () => {
-        await fetch(`http://localhost:3030/data/memes/${match.params.id}`, {
-            method: 'DELETE',
-            headers: { 'X-Authorization': user.authToken }
-        });
-        history.push('/all-memes');
+        if (window.confirm('Please confirm to delete')) {
+            await fetch(`http://localhost:3030/data/memes/${match.params.id}`, {
+                method: 'DELETE',
+                headers: { 'X-Authorization': user.authToken }
+            });
+            history.push('/all-memes');
+        }
     };
 
     return (
@@ -41,7 +43,7 @@ function Details({
                         {singleMemeArticle.description}
                     </p>
 
-                    {user.userId === singleMemeArticle._ownerId && ( 
+                    {user.userId === singleMemeArticle._ownerId && (
                         <>
                             <Link className="button warning" to={`/edit/${match.params.id}`}>Edit</Link>
                             <button onClick={deleteSingleMemeArticle} className="button danger">Delete</button>

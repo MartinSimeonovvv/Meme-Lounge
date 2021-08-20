@@ -5,7 +5,6 @@ import { AuthContext } from '../Contexts/AuthContext';
 function MyMemes() {
     const [myMemes, setMyMemes] = useState([]);
     const { user } = useContext(AuthContext);
-    console.log(user);
 
     useEffect(() => {
         return fetch(`http://localhost:3030/data/memes?where=_ownerId%3D%22${user.userId}%22&sortBy=_createdOn%20desc`)
